@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ScienceResultBoost - Predict Your GCE O/L Science Result!</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="logo">ScienceResultBoost.com</div>
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="signup.html">Create Your Prediction Link</a>
+        </div>
+    </nav>
+
+    <!-- Main Section -->
+    <section class="result-predictor" id="result-predictor">
+        <h1>📚 Predict Your 2024 GCE O/L Science Result! 📚</h1>
+        <p>We’ll analyze your exam experience to predict your Science grade. Answer the questions below!</p>
+        <form id="result-form">
+            <div class="form-group">
+                <label for="user-name">Your Name</label>
+                <input type="text" id="user-name" placeholder="Enter your name" required>
+            </div>
+            <div class="form-group">
+                <label for="q1">How prepared did you feel for the Science paper?</label>
+                <select id="q1" required>
+                    <option value="" disabled selected>Select an option</option>
+                    <option value="very-prepared">Very Prepared</option>
+                    <option value="somewhat-prepared">Somewhat Prepared</option>
+                    <option value="not-prepared">Not Prepared</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="q2">Which part of the Science paper was the hardest?</label>
+                <select id="q2" required>
+                    <option value="" disabled selected>Select an option</option>
+                    <option value="physics">Physics</option>
+                    <option value="chemistry">Chemistry</option>
+                    <option value="biology">Biology</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="q3">How many hours did you study daily for Science?</label>
+                <select id="q3" required>
+                    <option value="" disabled selected>Select an option</option>
+                    <option value="less-than-1">Less than 1 hour</option>
+                    <option value="1-3-hours">1-3 hours</option>
+                    <option value="more-than-3">More than 3 hours</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="q4">Did you find the MCQs or essay questions harder?</label>
+                <select id="q4" required>
+                    <option value="" disabled selected>Select an option</option>
+                    <option value="mcqs">MCQs</option>
+                    <option value="essay">Essay Questions</option>
+                    <option value="both">Both</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="q5">How confident were you about your answers?</label>
+                <select id="q5" required>
+                    <option value="" disabled selected>Select an option</option>
+                    <option value="very-confident">Very Confident</option>
+                    <option value="somewhat-confident">Somewhat Confident</option>
+                    <option value="not-confident">Not Confident</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="q6">Did you finish the Science paper on time?</label>
+                <select id="q6" required>
+                    <option value="" disabled selected>Select an option</option>
+                    <option value="yes">Yes</option>
+                    <option value="no">No</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="q7">How many past papers did you practice for Science?</label>
+                <select id="q7" required>
+                    <option value="" disabled selected>Select an option</option>
+                    <option value="none">None</option>
+                    <option value="1-5">1-5 Papers</option>
+                    <option value="more-than-5">More than 5 Papers</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="q8">Did you get enough sleep the night before the Science exam?</label>
+                <select id="q8" required>
+                    <option value="" disabled selected>Select an option</option>
+                    <option value="yes">Yes</option>
+                    <option value="no">No</option>
+                </select>
+            </div>
+            <button type="submit" class="btn">Predict My Result</button>
+        </form>
+        <div class="loading" id="loading" style="display: none;">
+            <p>Analyzing your answers... <span class="spinner"></span></p>
+        </div>
+        <div class="result" id="result" style="display: none;">
+            <h2>Your Predicted Science Result: <span id="predicted-grade"></span></h2>
+            <p>Are you happy with your predicted result?</p>
+            <div class="form-group">
+                <select id="happy-result" required>
+                    <option value="" disabled selected>Select an option</option>
+                    <option value="yes">Yes, I’m happy!</option>
+                    <option value="no">No, I expected better.</option>
+                </select>
+                <button id="submit-happy" class="btn">Submit</button>
+            </div>
+        </div>
+        <div class="prank-reveal" id="prank-reveal" style="display: none;">
+            <h2>April Fools! You’ve been pranked by Vidun!</h2>
+            <p>This was a joke to lighten your post-exam stress! Want to prank your friends too? <a href="signup.html">Create your own prediction link!</a></p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>Website by Vidun Demitha</p>
+        <p>© 2025 ScienceResultBoost.com. All Rights Reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

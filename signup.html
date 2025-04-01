@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Your Prediction Link - ScienceResultBoost</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="logo">ScienceResultBoost.com</div>
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="signup.html">Create Your Prediction Link</a>
+        </div>
+    </nav>
+
+    <!-- Signup Section -->
+    <section class="signup">
+        <h1>Create Your Own Exam Result Prank!</h1>
+        <p>Sign up to get a unique link to prank your friends this April Fools’ Day!</p>
+        <form id="signup-form">
+            <div class="form-group">
+                <label for="signup-name">Your Name</label>
+                <input type="text" id="signup-name" placeholder="Enter your name" required>
+            </div>
+            <div class="form-group">
+                <label for="signup-email">Your Email</label>
+                <input type="email" id="signup-email" placeholder="Enter your email" required>
+            </div>
+            <button type="submit" class="btn">Get Your Prank Link</button>
+        </form>
+        <div class="signup-result" id="signup-result" style="display: none;">
+            <h2>Your Prank Link is Ready!</h2>
+            <p>Share this link with your friends: <a id="prank-link" href="#">[Your Prank Link]</a></p>
+            <p>View their answers here: <a id="dashboard-link" href="dashboard.html">Your Dashboard</a></p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>Website by Vidun Demitha</p>
+        <p>© 2025 ScienceResultBoost.com. All Rights Reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
